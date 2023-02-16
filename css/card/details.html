@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container { 
+            height: auto;
+            width: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .item1{
+            
+            padding: 0px;
+            width: 20%;
+            margin: 0px;
+            height: 800px;
+
+        }
+        .item1>ul{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 0px;
+        }
+        .item2{
+            width: 70%;
+            border: 1px solid;
+            height: 30%; 
+        }
+        .ttl{
+            text-align: center;
+        }
+        .lst{
+            width: 150px;
+            height:100px;
+            margin: 5px;
+            
+
+        }
+        .data{
+            display:grid;
+            grid-template-columns: auto auto auto;
+
+
+        }
+        h3{
+            margin-top: 0px ;
+            margin-bottom: 0px;
+            background-color: black;
+            color: aliceblue;
+            padding: 5px;
+        }
+        .lst li{
+            margin: 10px;
+            list-style: none;
+        }
+        @media only screen and (max-width :800px) {
+            .item1{
+                display: none;
+            }
+            .item2{ 
+                width: 100%;
+                border: 1px solid;
+            }
+            
+        }
+        @media only  screen and (max-width: 700px ){
+            .item1{
+                display: none;
+            }
+            .item2{
+            width: 100%;
+            border: 1px solid; 
+            }
+            .data{
+            display:grid;
+            grid-template-columns: auto auto ;
+            }        
+        }
+        @media only  screen and (max-width: 400px ){
+            .item1{
+                display: none;
+            }
+            .item2{
+            width: 100%;
+            border: 1px solid; 
+            }
+            .data{
+            display:grid;
+            grid-template-columns: auto;
+            }        
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item1">
+            <ul  >
+                <h3> Public </h3>
+                    <ul>
+                        <li><a href="#">Link 1 </a></li>
+                        <li><a href="#">Link 2</a></li>
+                    </ul>
+                <h3> View </h3>
+                    <ul>
+                        <li><a href="#">Link 1 </a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                        <li><a href="#">Link 4</a></li>
+                        <li><a href="#">Link 5</a></li>
+                        <li><a href="#">Link 6</a></li>
+                    </ul>
+                <h3> HR </h3>
+                    <ul>
+                        <li><a href="#">Address Details  </a></li>
+                        <li><a href="#">Family Details </a></li>
+                    </ul>
+                <h3> Network Details </h3>
+                    <ul >
+                        <li><a href="#">Vehicle Details   </a></li>
+                        <li><a href="#">Machine Details  </a></li>
+                    </ul>
+            </ul>
+        </div>
+        <div class="item2">
+            <div class="ttl">
+                <h3> Details </h3>
+            </div>
+            <div class="data">
+                <div class="lst">
+                    <ul>
+                        <li> <strong>Name: </strong>abc </li>
+                        <li> <strong>Value:</strong>def </li>
+                        <li> <strong>Extra: </strong>xyz </li>
+                        </ul>
+                    
+                </div> 
+                <div class="lst">
+                    
+                    <ul>
+                        <li> <strong>Name: </strong>abc </li>
+                        <li> <strong>Value:</strong>def </li>
+                        <li> <strong>Extra: </strong>xyz </li>
+                        </ul>
+                    
+                </div> 
+                <div class="lst">
+                    
+                    <ul>
+                        <li> <strong>Name: </strong>abc </li>
+                        <li> <strong>Value:</strong>def </li>
+                        <li> <strong>Extra: </strong>xyz </li>
+                        </ul>
+                    
+                </div> 
+                <div class="lst">
+                    
+                    <ul>
+                        <li> <strong>Name: </strong>abc </li>
+                        <li> <strong>Value:</strong>def </li>
+                        <li> <strong>Extra: </strong>xyz </li>
+                        </ul>
+                    
+                </div> 
+                <div class="lst">
+                    <ul>
+                        <li> <strong>Name: </strong>abc </li>
+                        <li> <strong>Value:</strong>def </li>
+                        <li> <strong>Extra: </strong>xyz </li>
+                        </ul>
+                    
+                </div> 
+                <div class="lst">
+                    <ul>
+                        <li> <strong>Name: </strong>abc </li>
+                        <li> <strong>Value:</strong>def </li>
+                        <li> <strong>Extra: </strong>xyz </li>
+                        </ul>
+                </div> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>

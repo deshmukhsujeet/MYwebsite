@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+            <style>
+                 *{
+                    width: auto;
+                    margin: 0;
+                }
+                .menubar {
+                background-color: rgb(196, 186, 186);
+                display: flex;
+                border: 2px solid black;
+                border-bottom: 4px solid rgba(58, 183, 255, 0.473);
+        
+            }
+        
+            .imgg img  {
+                width: 100px;
+                margin: 5%;
+                margin-left: 245px;
+                background-color: white;
+                box-shadow: 10px 10px 50px 12px white;
+        
+            }
+        
+            .navbar {
+        
+                padding-left: 15%;
+                padding-top: 50px;
+            }
+        
+            .navbar ul {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        
+            .navbar ul li {
+                list-style: none;
+                text-decoration: white;
+            }
+        
+            .navbar ul li a {
+                text-decoration: none;
+                color: white;
+                padding: 20px;
+            }
+            .main{
+             display: flex;
+            }
+            .sidebar{
+                width: 25%;
+                padding-right: 20px;
+                padding-bottom: 35%;
+                border: 2px solid black;
+                background-color: rgb(196, 186, 186);
+            } 
+            .left ul li a{
+                color: rgb(136, 51, 51);
+            }
+            .left ul li a:hover {
+                text-decoration: none;
+                color: rgb(241, 225, 225);
+            }
+           .imgi{
+            float: right;
+            justify-items: center;
+            width: 100%;
+            
+           }  
+           .imgi img{
+           width: 100%;
+           }
+           @media (max-width:850px){
+                .menubar{
+                    display: flex;
+                    flex-direction: column;
+                    width:100% ;
+                 
+                }
+                .imgg{
+                    width: 100%;
+                    margin: auto;
+                    
+                }
+                .imgg img{
+                    align-items: center;
+                    margin: 50px 100px ;
+                    width: 20%; 
+
+               }
+                .navbar{
+                    margin: 0;
+                    padding: 0;
+                }
+                    
+                .navbar ul{
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding: 0px;
+                    
+                } 
+                
+                .main{
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                }
+                .sidebar{
+                    width: 100%;
+                    padding-bottom: 0;
+                }
+            }
+            </style>      
+<body>
+    <header>
+        <div class="menubar">
+            <div class="imgg"><a href="https://radixweb.com/" target=main><img
+                src="data:image/jpeg;base64,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"
+                alt="logo"></a>
+            
+                </div>
+            <div class="navbar">
+                <ul>
+                    <li><a href="../index.html">HOME</a></li><br>
+                    <li ><a href="../html/html.html"  >HTML</a></li><br>
+                    <li><a href="CSS.html" style="color: rgb(107, 104, 104);">CSS</a></li><br>
+                    <li><a href="../bootstrap/bootstrap.html">Bootstrap</a></li><br>
+                    <li><a href="../tailwind/tailwind.html">Tailwind</a></li><br>
+                    <li><a href="../javascript/javascript.html">JavaScript</a></li><br>
+                    <li><a href="../jquery/Jquery.html">JQuery</a></li><br>
+                    <li><a href="../miniproject/Miniproject.html">Mini Project</a></li><br>
+                    <li><a href="../SQL/SQL.html">SQL</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main">
+            <div class="sidebar">
+                <div class="left">
+                    <div>
+                        <ul>
+                            <li>Day 1</li>
+                            <br>
+                            <ul>
+                                <li>Practice</li><br>
+                                <ul>
+                                    <li><a href="day1prac1.html">Practice 1</a></li><br>
+                                    <li><a href="day1prac2.html">Practice 2</a></li><br>
+                                    <li><a href="day1prac3.html">Practice 3</a></li><br>
+                                    <li><a href="day1prac4.html">Practice 4</a></li><br>
+                                </ul>
+                                <li>Assignments</li><br>
+                                <ul>
+                                    <li><a href="day1ass1.html">Assignment 1</a></li><br>
+                                    <li><a href="day1ass2.html" style="color: rgb(107, 104, 104);">Assignment 2</a></li><br>
+                                    <li><a href="day1ass3.html">Assignment 3</a></li><br>
+                                   
+                                </ul>
+                            </ul>
+                        </ul>
+                        <ul>
+                            <li>Day 2</li>
+                            <br>
+                            <ul>
+                                <li>Practice</li><br>
+                                <ul>
+                                    <li><a href="day2prac1.html">Practice 1</a></li><br>
+                                    <li><a href="day2prac2.html">Practice 2</a></li><br>
+                                    <li><a href="day2prac3.html">Practice 3</a></li><br>
+                                    
+                                </ul>
+                                <li>Assignments</li><br>
+                                <ul>
+                                    <li><a href="day2ass1.html">Assignment 1</a></li><br>
+                                    <li><a href="day2ass2.html">Assignment 2</a></li><br>
+                                    <li><a href="card/card design.html">Assignment 3</a></li><br>
+                                        <li><a href="https://stackblitz.com/edit/web-platform-iwgxuq?file=index.html">Assignment 4</a></li><br>
+                                        <li><a href="https://stackblitz.com/edit/web-platform-kskgly?file=index.html">Assignment 5</a></li>
+                                   
+                                </ul>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="imgi">
+                <section class="geader">
+                    <h3 style="text-align: center;">My Resume</h3>
+                </section>
+                
+                  
+
+
+                    <section class="mydetails">
+                        <br>
+                        <p>
+                            &nbsp;<strong>Sujeet Deshmukh</strong> <br>
+                            &nbsp;Bhopal IND <br>
+                            &nbsp;+917415481647
+                        </p>
+                    </section>
+                    <hr>
+                    <section class="career">
+                        <h3>Career Obective</h3>
+                        <p>"A motivated individual with in-depth knowledge of languages and development tools, seeking a position in a growth-oriented
+                            company where I can use my skills to the advantage of the company while having the scope to develop my own skills"
+                        </p>
+                    </section>
+                    <hr>
+                    <section class="skills">
+                        <h3>Technical Skills</h3>
+                        <ul>
+                           <li>C++</li>
+                           <li>JAVA</li>
+                           <li>REACT</li>
+                           <li>JAVASCRIPT</li>
+                           <li>.Net</li>
+                        </ul>
+                    </section>
+                    <hr>
+                    <section class="education">
+                        <h3>Education:</h3>
+                        <table style="width: 400px;height: 100px;">
+                            <caption></caption>
+                            <thead>
+                                <tr>
+                                    <th>Class</th>
+                                    <th>Grade</th>
+                                    <th>%</th>
+                                </tr>
+            
+                                <tr style="text-align: center;">
+                                    <td> 10th</td>
+                                    <td> A++</td>
+                                    <td> 95%</td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td>12th</td>
+                                    <td>A+</td>
+                                    <td>90%</td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td>B.E.</td>
+                                    <td>A+</td>
+                                    <td>92%</td>
+                                </tr>
+                            </thead>
+                        </table>
+                    </section>
+            
+                    <hr>
+                    <section class="hobbies">
+                        <h3>Hobbies</h3>
+                        <ul>
+                            <li>Photography</li>
+                            <li>Dancing</li>
+                            <li>Playing TT</li>
+                            <li>Driving</li>
+                        </ul>
+                    </section>
+                    <hr>
+                    <section class="declaration">
+                        <h3>declaration</h3>
+                        <p>I hereby declare that all the details provided above are true to the best of my knowledge
+                        </p>
+                        <br>
+                        <br>
+                    </section>
+                    <hr>
+                    <section class="video">
+                        <h3>Project Videos</h3>
+                        <video width="800" height="350" controls>
+                            <source src="https://player.vimeo.com/external/334344435.sd.mp4?s=d367341a941ffa97781ade70e4f4a28f4a1a5fc8&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+                        </video>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
